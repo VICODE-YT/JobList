@@ -52,13 +52,12 @@ body{
     height: 150px;
     
     min-width: max-content;
-    max-width: 1120px;
+    max-width: /* 1120px */78%;
     width:1120px ;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     margin-top: 2em;
     margin-bottom: 2em;
 
