@@ -30,3 +30,5 @@ The designs were created to the following widths:
 
 - Family: [Spartan](https://fonts.google.com/specimen/Spartan)
 - Weights: 500, 700
+
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">

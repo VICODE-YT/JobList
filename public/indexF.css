@@ -1,0 +1,178 @@
+:root{
+    /* Primary */
+    --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
+    --Desaturated-Dark-Cyan-opaced: rgba(91, 164, 164, 0.027);
+
+    /*Neutral */
+    --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
+    --Light-Grayish-Cyan-Filter-Tablets: hsl(180, 31%, 95%);
+    --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+    --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+    --White:#FFF;
+
+    font-weight: 700;
+    font-family: Spartan,sans-serif;
+    font-size: 14px;
+    color: var(--Desaturated-Dark-Cyan);
+}
+body{
+    background-color: var(--Light-Grayish-Cyan-Background);
+}
+.header{
+    background-repeat: repeat;
+    background-size: auto;
+    height: 5em;
+    background-color: var(--Desaturated-Dark-Cyan);
+}
+.main-container{
+    width: 100%;
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    align-items: center;
+}
+
+.main-container__job-list{
+    width: 100%;
+    max-width: 1440px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.job-list__card-job{
+    box-shadow: 0px 4px 15px 0px var(--Dark-Grayish-Cyan);
+    border-radius: 1em;
+    position: relative;
+
+    height: 150px;
+    
+    min-width: max-content;
+    max-width: 1120px;
+    width:1120px ;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+/* IMG and description */
+.card__description{
+    display: flex;
+/*     background-color: red;
+ */    align-items: center;
+    height: 60%; 
+    margin-left: 2em;
+    width: max-content;
+    max-width: max-content;
+}
+.description__img-company{
+    height: 100%;
+}
+/* Text in the description */
+.description__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*     background-color: mediumseagreen;
+ */    
+    height: 100%;
+    width: max-content;
+    max-width: max-content;
+    margin-left: 1em;
+
+}
+.description__header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+}
+.description__header>:nth-child(2){
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.header__company{
+}
+.header__marker{/* NEW | FEATURED */
+    border-radius: 12px;
+    padding: 6px  8px 3px 8px;
+    color: white;
+    font-size: 12px;
+
+}
+.label_new{
+    background-color: var(--Desaturated-Dark-Cyan);
+    
+}
+.label_feature{
+    background-color: var(--Very-Dark-Grayish-Cyan);
+}
+
+.card-header__tittle{
+    color: black;
+    font-size: 16px;
+}
+
+.card__card-footer{/* 1Day aho, Full time, USA only */
+    font-weight: 500;
+    color: var(--Dark-Grayish-Cyan);
+
+}
+.card-footer__item{
+
+}
+.card__card-footer>*:not(:first-child)::before{
+    content: " • ";
+}
+
+.card__job-requirements{
+/*     background-color: yellow;
+ */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    max-width: 450px;
+
+    margin-right: 2em;
+
+}
+
+.marker{
+
+}
+
+.marker-background{
+    background-color: var(--Desaturated-Dark-Cyan-opaced);
+    padding: 5px;
+    border-radius: 5px;
+}
+.marker-background:hover{
+
+    background-color: var(--Desaturated-Dark-Cyan);
+    color: white;
+    cursor: pointer;
+
+}
+@media screen and (max-width:375px){
+    .header{
+        background-image: url(images/bg-header-mobile.svg);
+    }
+}
+
+@media screen and (min-width:376px){
+    .header{
+        background-image: url(images/bg-header-desktop.svg);
+    }
+
+
+}
