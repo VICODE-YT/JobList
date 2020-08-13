@@ -62,8 +62,19 @@ body{
     margin-top: 2em;
     margin-bottom: 2em;
 
+    overflow: hidden;
 }
-
+.job-list__card-job:hover .card-job__selectable-decoration{
+    transform: translateX(0);
+}
+.card-job__selectable-decoration{
+    background-color: var(--Desaturated-Dark-Cyan);
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    transform: translateX(-1em);
+    transition: transform .3s;
+}
 /* IMG and description */
 .card__description{
     display: flex;
