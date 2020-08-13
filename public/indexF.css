@@ -173,13 +173,15 @@ body{
     cursor: pointer;
 
 }
-@media screen and (max-width:375px){
+@media screen and (max-width:419px){
     .header{
         background-image: url(images/bg-header-mobile.svg);
     }
 }
+@media screen and (min-width:420px){
 
-@media screen and (min-width:376px){
+}
+@media screen and (min-width:890px){
     .header{
         background-image: url(images/bg-header-desktop.svg);
     }
