@@ -1,7 +1,7 @@
 :root{
     /* Primary */
     --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
-    --Desaturated-Dark-Cyan-opaced: rgba(91, 164, 164, 0.027);
+    --Desaturated-Dark-Cyan-opaced: rgba(91, 164, 164, 0.102);
 
     /*Neutral */
     --Light-Grayish-Cyan-Background: hsl(180, 52%, 96%);
@@ -29,7 +29,7 @@ body{
     display: flex;
     margin-top: 5em;
     margin-bottom: 5em;
-
+    justify-content: center;
     align-items: center;
 }
 
