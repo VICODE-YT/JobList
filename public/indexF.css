@@ -57,6 +57,13 @@ body{
 /* .job-list__card-job:hover .card-job__selectable-decoration{
     transform: translateX(0);
 } */
+
+.card-job__separator{
+    width: 85%;
+    
+    background-color: gray;
+    align-self: center;
+}
 .card-job__selectable-decoration{
     background-color: var(--Desaturated-Dark-Cyan);
     width: 8px;
@@ -188,6 +195,9 @@ body{
         overflow: visible;
 
     }
+    .card-job__separator{
+        display: block;
+    }
     .card__description{
         width: 90%;
         max-width: 90%; 
@@ -252,6 +262,10 @@ body{
         align-content: stretch;
 
 
+    }
+    .card-job__separator{
+
+        display: none;
     }
     .card__description{
         margin-left: 2em;
