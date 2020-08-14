@@ -52,18 +52,23 @@ body{
 
     margin-top: 2em;
     margin-bottom: 2em;
-
+    overflow:visible;
 }
-.job-list__card-job:hover .card-job__selectable-decoration{
+/* .job-list__card-job:hover .card-job__selectable-decoration{
     transform: translateX(0);
-}
+} */
 .card-job__selectable-decoration{
     background-color: var(--Desaturated-Dark-Cyan);
     width: 8px;
     height: 100%;
     position: absolute;
-    transform: translateX(-8px);
-    transition: transform .3s;
+    left: 0;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+
+/*     transform: translateX(-8px);
+ *//*     transition: transform .3s;
+ */
 }
 /* IMG and description */
 .card__description{
@@ -246,7 +251,6 @@ body{
         align-items: center;
         align-content: stretch;
 
-        overflow: hidden;
 
     }
     .card__description{
