@@ -1,5 +1,6 @@
 :root{
     /* Primary */
+    --NoSatured-Dark-Cyan: hsl(180, 30%, 30%);
     --Desaturated-Dark-Cyan: hsl(180, 29%, 50%);
     --Desaturated-Dark-Cyan-opaced: rgba(91, 164, 164, 0.102);
 
@@ -22,8 +23,64 @@ body{
     background-repeat: repeat;
     background-size: auto;
     height: 5em;
-    background-color: var(--Desaturated-Dark-Cyan);
+    background-color: red;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
 }
+.filter-container{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    /* margin: 0 auto; */
+    position: absolute;
+    top:50%;
+    background-color: var(--Light-Grayish-Cyan-Background);
+
+    box-shadow: 0px 4px 15px 0px var(--Dark-Grayish-Cyan);
+
+    min-width: max-content;
+    max-width: /* 1120px */78%;
+    width:1120px ;
+
+    border-radius: 1em;
+}
+.filter-container__filters{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.75em ;
+}
+.filter-container__filters>*{
+
+    margin-right: 0.75em;
+}
+
+.filter-container__filters>*::after{/* All buttons */
+
+    content: "X";
+    background-color: var(--Desaturated-Dark-Cyan);
+    color: var(--White);
+    padding:5px;
+    margin-left: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.filter-container__filters>*:hover::after{/* All buttons */
+
+    background-color: var(--NoSatured-Dark-Cyan);
+
+}
+.filter-container__btn-clear{
+    margin: 1.75em ;
+}
+
 .main-container{
     width: 100%;
     display: flex;
@@ -169,6 +226,10 @@ body{
     cursor: pointer;
 
 }
+.filter-container__filters>*:hover{
+    background-color: var(--Desaturated-Dark-Cyan-opaced);
+    color: var(--Desaturated-Dark-Cyan)
+}
 @media screen and (min-width:360px){
     .header{
         background-image: url(images/bg-header-mobile.svg);
@@ -291,4 +352,6 @@ body{
         justify-content: space-between;
 
     }
+
+ 
 }
