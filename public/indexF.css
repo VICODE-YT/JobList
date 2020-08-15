@@ -276,6 +276,21 @@ body{
         overflow: visible;
 
     }
+    .filter-container__btn-clear{
+        cursor: pointer;
+        /*text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 10%; */
+    }
+    .filter-container__btn-clear::after{
+        
+        content: "";
+        height: 2px;
+        background-color: var(--Desaturated-Dark-Cyan);
+        width: 100%;
+        display: block;
+
+    }
     .card-job__separator{
         display: block;
     }
