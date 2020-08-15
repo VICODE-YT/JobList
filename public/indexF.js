@@ -67,13 +67,3 @@ const isFilterItemInCardRequirement = function (filterItem,cardRequirement) {
     return false;
 
 }
-
-
-const isRequirementInFilter = function(req){
-    for (let requirementInFilter in listForFiltering) {
-        if (req.innerHTML === listForFiltering[requirementInFilter]) {
-            return true;
-        }
-    }
-    return false;
-}
