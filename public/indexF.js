@@ -1,4 +1,4 @@
-const btnsRequirements = document.getElementsByClassName("job-requirements__requirement");
+const btnsRequirements = document.getElementsByClassName("main-container__job-list")[0].getElementsByClassName("job-requirements__requirement");
 const jobCards = document.getElementsByClassName("job-list__card-job");
 
 /* All non repetible requirements existent. */
