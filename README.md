@@ -16,6 +16,6 @@ This app allow the user filter the jobs showed in the screen by the requirements
 - Breakpoints use for responsive design.
 - Use colors and fonts given by a design sheet.
 - Distribute the elements correctly.
-
+- Basic real use of JavaScript to allow filtering the cards.
 
 **Click [here](https://joblist-fea8c.web.app/) to go to the site.**
