@@ -1,21 +1,26 @@
 const btnsRequirements = document.getElementsByClassName("main-container__job-list")[0].getElementsByClassName("job-requirements__requirement");
 const jobCards = document.getElementsByClassName("job-list__card-job");
+const filterContainer = document.getElementsByClassName("filter-container")[0];
+const btnClearFilter = document.getElementsByClassName("filter-container__btn-clear")[0];
 
 /* All non repetible requirements existent. */
 const listRequirements = {};
 
 /* The cards will be filtered by this requirements to be 
 filtered, if it's empty, then all cards will be shown.  */
-const listForFiltering = {};
+let listForFiltering = {};
 
-
+btnClearFilter.addEventListener("click",function(){
+    listForFiltering = {};
+    filterCardsByRequirementsChoosed();
+});
 
 for (let requirement of btnsRequirements) {
 
     let text = requirement.innerHTML;
     listRequirements[text] = text;/* Creates a new property with the same value, if already existe, it's overited. */
-
     requirement.addEventListener("click", function () {
+        filterContainer.style.display = "flex";/*Always when requirement is clicked, the filter container should be displayed */
 
         let requirementClicked = this.innerHTML;
         listForFiltering[requirementClicked] = requirementClicked;

@@ -33,7 +33,9 @@ body{
 }
 .filter-container{
 
-    display: flex;
+    /* display: flex; */
+    display: none;
+
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -55,12 +57,10 @@ body{
 .filter-container__filters{
     display: flex;
     flex-wrap: wrap;
-
 }
 .filter-container__filters>*{
 
-/*     margin-right: 0.75em;
- */
+    /*margin-right: 0.75em; */
 }
 
 .filter-container__filters>*::after{/* All buttons */
@@ -337,19 +337,6 @@ body{
         background-image: url(images/bg-header-desktop.svg);
     }
     .filter-container{
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-        /* margin: 0 auto; */
-        position: absolute;
-        top:50%;
-        background-color: var(--Light-Grayish-Cyan-Background);
-
-        box-shadow: 0px 4px 15px 0px var(--Dark-Grayish-Cyan);
 
         min-width: max-content;
         max-width: /* 1120px */78%;
