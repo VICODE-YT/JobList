@@ -16,6 +16,8 @@ let listForFiltering = {};
 btnClearFilter.addEventListener("click",function(){
     listForFiltering = {};
     filterCardsByRequirementsChoosed();
+    filterContainer__filters.innerHTML = "";
+    filterContainer.style.display = "none";
 });
 
 for (let requirement of btnsRequirements) {
@@ -26,19 +28,26 @@ for (let requirement of btnsRequirements) {
         filterContainer.style.display = "flex";/*Always when requirement is clicked, the filter container should be displayed */
 
         let requirementClicked = this.innerHTML;
-        listForFiltering[requirementClicked] = requirementClicked;
-        //filterContainer__filters.appendChild("<div class='marker marker - background job - requirements__requirement'>${requirementClicked}</div>")
-        
-        let labelFilter=document.createElement("div");
-        labelFilter.innerHTML = requirementClicked;
-        labelFilter.classList.add("marker");
-        labelFilter.classList.add("marker-background");
-        labelFilter.classList.add("job-requirements__requirement");
 
-        filterContainer__filters.appendChild(labelFilter);
+
+        if(filterAlreadyExist(requirementClicked)=== false){
+            //filterContainer__filters.appendChild("<div class='marker marker - background job - requirements__requirement'>${requirementClicked}</div>")
+
+            let labelFilter = document.createElement("div");
+            labelFilter.innerHTML = requirementClicked;
+            labelFilter.classList.add("marker");
+            labelFilter.classList.add("marker-background");
+            labelFilter.classList.add("job-requirements__requirement");
+
+            filterContainer__filters.appendChild(labelFilter);
+
+            listForFiltering[requirementClicked] = requirementClicked;
+
+        }else{
+            //warning message abour filter already exists.
+        }
 
         filterCardsByRequirementsChoosed();
-        
 
     }, false);
 
@@ -56,8 +65,24 @@ const filterCardsByRequirementsChoosed = function(){
             card.style.display = cardHasRequirementsFilter(card)===true?"flex":"none";
         }
     }
-
+/*     refreshFiltersInScreen();
+ */
 };
+/* 
+const refreshFiltersInScreen = function(){
+    filterContainer__filters.innerHTML="";
+    for
+}
+ */
+/* The parameter is text */
+const filterAlreadyExist = function(requirementClicked){
+    for(let filter in listForFiltering){
+        if(requirementClicked === listForFiltering[filter]){
+            return true;
+        }
+    }
+    return false;
+}
 
 const cardHasRequirementsFilter = function(card){
 
