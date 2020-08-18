@@ -42,9 +42,10 @@ for (let requirement of btnsRequirements) {
             labelFilter.classList.add("marker-filter");
 
             labelFilter.addEventListener("click",function(){
-                filterContainer.remove(this);
+                delete listForFiltering[labelFilter.innerHTML];
+                filterContainer__filters.removeChild(labelFilter);
                 filterCardsByRequirementsChoosed();
-                delete listForFiltering[this.innerHTML];
+
             },false);
 
             filterContainer__filters.appendChild(labelFilter);
@@ -68,6 +69,8 @@ const filterCardsByRequirementsChoosed = function(){
         for(let card of jobCards){
             card.style.display = "flex";
         }
+        filterContainer.style.display = "none";
+
     }else{
         for(let card of jobCards){/* JobCards is a Collection, so it's iterable */
             card.style.display = cardHasRequirementsFilter(card)===true?"flex":"none";
