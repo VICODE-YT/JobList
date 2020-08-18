@@ -2,6 +2,7 @@ const btnsRequirements = document.getElementsByClassName("main-container__job-li
 const jobCards = document.getElementsByClassName("job-list__card-job");
 const filterContainer = document.getElementsByClassName("filter-container")[0];
 const btnClearFilter = document.getElementsByClassName("filter-container__btn-clear")[0];
+
 //<div class="marker marker-background job-requirements__requirement">Frontend</div>
 
 const filterContainer__filters = document.getElementsByClassName("filter-container__filters")[0];
@@ -38,6 +39,13 @@ for (let requirement of btnsRequirements) {
             labelFilter.classList.add("marker");
             labelFilter.classList.add("marker-background");
             labelFilter.classList.add("job-requirements__requirement");
+            labelFilter.classList.add("marker-filter");
+
+            labelFilter.addEventListener("click",function(){
+                filterContainer.remove(this);
+                filterCardsByRequirementsChoosed();
+                delete listForFiltering[this.innerHTML];
+            },false);
 
             filterContainer__filters.appendChild(labelFilter);
 
